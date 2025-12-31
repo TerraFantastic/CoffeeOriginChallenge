@@ -2,9 +2,10 @@
 fetch("info.json")
   .then(response => response.json())
   .then(json => {
-
+    log("Loaded in JSON file")
     // Attach loaded in object to variable "birds"
     const info = json
+    log("Set JSON Details")
 
     // Function for updating the mapview when a region is selected
     function regionSelect(region) {
