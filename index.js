@@ -25,13 +25,15 @@ fetch("info.json")
     }
     
     // Function for displaying all bird options when no specific species is selected 
-    function setInitialView(info) {
+    function regionView(info) {
       
       // Clear all elements from the infowindow div
+      log("Erasing infowindow")
       document.querySelector('#infowindow').innerHTML = ""
       
       // Creates New Button for each Region 
       info.Regions.forEach(element => {
+      log("Creating Region Button")
       let newbutton = document.createElement('button')
       var Name = element.Name
       newbutton.innerHTML = Name
@@ -41,13 +43,15 @@ fetch("info.json")
       document.querySelector('#infowindow').append(newbutton)
 
       // Adapt this to add in button selection method  
+      log("Adding on click event")
       document.getElementById(element.Name).addEventListener('click', () => {
-        RegionSelect(Name)
+        regionSelect(Name);
         
       })
       })
      // Set Intial View
-      setInitialView(info);
+     log("Setting Initial View")
+      regionView(info);
     }
   }
   )
