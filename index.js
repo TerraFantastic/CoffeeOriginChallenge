@@ -48,10 +48,13 @@ fetch("info.json")
       })
      // Set Intial View
       setInitialView(info);
-    })
+    }
+  }
+)
 
 
 
+=
 
 
 
