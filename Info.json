@@ -1,0 +1,13 @@
+{
+    "Regions": [
+        {
+            "Name": "Africa"
+        },
+        {
+            "Name":"Asia"
+        },
+        {
+            "Name":"Americas"
+        }
+    ]
+}
