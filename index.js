@@ -50,11 +50,7 @@ fetch("info.json")
       setInitialView(info);
     }
   }
-)
-
-
-
-=
+  )
 
 
 
