@@ -45,10 +45,11 @@ fetch("info.json")
         RegionSelect(Name)
         
       })
-      }
+      })
      // Set Intial View
       setInitialView(info);
     })
+
 
 
 
