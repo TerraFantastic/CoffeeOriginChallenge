@@ -2,7 +2,9 @@
 fetch("info.json")
   .then(response => response.json())
   .then(json => {
+    
     console.log("Loaded in JSON file")
+    
     // Attach loaded in object to variable "birds"
     const info = json
     console.log("Set JSON Details")
@@ -50,10 +52,10 @@ fetch("info.json")
         
       })
       })
-     // Set Intial View
-     console.log("Setting Initial View")
-      regionView(info);
     }
+    // Set Intial View
+      console.log("Setting Initial View")
+      regionView(info);
   }
   )
 
