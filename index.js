@@ -27,10 +27,11 @@ fetch("info.json")
         //showbirdinfo(Name)
         
       })
-      })
+      }
      }
      // Set Intial View
       setInitialView(info);
     })
+
 
 
