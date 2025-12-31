@@ -21,7 +21,7 @@ fetch("info.json")
         newbutton.style.width = "33vw"
         newbutton.style.height = "10vh"
         document.querySelector('#infowindow').append(newbutton)
-      }
+      })
     }
     
     // Function for displaying all bird options when no specific species is selected 
@@ -49,6 +49,7 @@ fetch("info.json")
      // Set Intial View
       setInitialView(info);
     })
+
 
 
 
