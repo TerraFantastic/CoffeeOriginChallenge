@@ -2,7 +2,7 @@
 fetch("info.json")
   .then(response => response.json())
   .then(json => {
-    
+
     console.log("Loaded in JSON file")
     
     // Attach loaded in object to variable "birds"
@@ -16,7 +16,7 @@ fetch("info.json")
       document.querySelector('#infowindow').innerHTML = ""
       
       // Find the countries for the selected region and create buttons for them 
-      info.Countries.forEach(element => {
+      info.region.Countries.forEach(element => {
         let newbutton = document.createElement('button')
         var Name = element.Name
         newbutton.innerHTML = Name
