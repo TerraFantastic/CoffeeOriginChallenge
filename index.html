@@ -20,11 +20,10 @@
         <!-- Load map components -->
         <script type="module" src="https://js.arcgis.com/map-components/4.32/arcgis-map-components.esm.js"></script>
 
-
     </head>
     <body>
         <div id="fullwindow" style="display: flex; flex-direction: row;">
-        <div id="infowindow" style="width: 35vw; height: 95vh; overflow-y: scroll;">
+        <div id="infowindow" style="width: 35vw; height: 95vh; overflow-y: scroll; pointer-events: none;">
         </div>
         <div id="mapwindow" style="flex-grow: 1; height: 95vh;">
              <arcgis-map 
@@ -36,6 +35,7 @@
         </div>
     </body>
 </html>
+
 
 
 
