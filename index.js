@@ -5,7 +5,7 @@ fetch("info.json")
 
     console.log("Loaded in JSON file")
     
-    // Attach loaded in object to variable "birds"
+    // Attach loaded in object to variable "info"
     const info = json
     console.log("Set JSON Details")
 
@@ -32,9 +32,12 @@ fetch("info.json")
     // Function for displaying all regions
     function regionView(info) {
       
-      // Clear all elements from the infowindow div
-      console.log("Erasing infowindow")
-      document.querySelector('#infowindow').innerHTML = ""
+      // Check if there in anything in the infowindow, if so clear
+      if (document.querySelector('#infowindow').innerHTML != "")
+      {
+        console.log("Erasing infowindow")
+        document.querySelector('#infowindow').innerHTML = ""
+      }
       
       // Creates New Button for each Region 
       info.Regions.forEach(element => {
