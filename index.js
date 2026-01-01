@@ -16,7 +16,7 @@ fetch("info.json")
       document.querySelector('#infowindow').innerHTML = ""
       
       // Find the countries for the selected region and create buttons for them 
-      let location = info.find(item => item.Name === region);
+      let location = info.Regions.find(item => item.Name === region);
       console.log("location is ", location)
       info.Regions[location].Countries.forEach(element => {
         let newbutton = document.createElement('button')
@@ -29,7 +29,7 @@ fetch("info.json")
       })
     }
     
-    // Function for displaying all bird options when no specific species is selected 
+    // Function for displaying all regions
     function regionView(info) {
       
       // Clear all elements from the infowindow div
