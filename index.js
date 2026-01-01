@@ -32,7 +32,11 @@ fetch("info.json")
         })
       
       //Update Map Centre and Visible Layers
-      document.querySelector("arcgis-map").goTo("-100.4593, 36.9014")
+      const point = 
+      { type: "point", 
+        longitude: -100.4593, 
+        latitude: 36.9014 }; 
+      document.querySelector("arcgis-map").goTo(point)
       } 
     
     // Function for displaying all regions
