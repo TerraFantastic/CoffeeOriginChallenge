@@ -18,7 +18,7 @@ fetch("info.json")
       // Find the countries for the selected region and create buttons for them 
       let location = info.Regions.find(item => item.Name === region);
       console.log("location is ", location)
-      info.Regions[location].Countries.forEach(element => {
+      location.Countries.forEach(element => {
         let newbutton = document.createElement('button')
         var Name = element.Name
         newbutton.innerHTML = Name
