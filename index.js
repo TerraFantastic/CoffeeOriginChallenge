@@ -32,7 +32,7 @@ fetch("info.json")
         })
       
       //Update Map Centre and Visible Layers
-      document.querySelector("arcgis-map").center = "-40.900557, 174.885971"
+      document.querySelector("arcgis-map").centre = "-100.4593, 36.9014"
       } 
     
     // Function for displaying all regions
