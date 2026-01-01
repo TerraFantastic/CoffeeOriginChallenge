@@ -12,7 +12,7 @@ fetch("info.json")
     // Function for updating the mapview when a region is selected
     function regionSelect(region) {
       
-      // Clear all elements from the infowindow div
+      // Clear the infowindow div
       document.querySelector('#infowindow').innerHTML = ""
       
       // Find the countries for the selected region and create buttons for them 
@@ -26,8 +26,14 @@ fetch("info.json")
         newbutton.style.width = "33vw"
         newbutton.style.height = "10vh"
         document.querySelector('#infowindow').append(newbutton)
-      })
-    }
+
+        // Set On Click Event for Buttons 
+
+        })
+      
+      //Update Map Centre and Visible Layers
+      document.querySelector("arcgis-map").center = "-40.900557, 174.885971"
+      } 
     
     // Function for displaying all regions
     function regionView(info) {
@@ -50,7 +56,7 @@ fetch("info.json")
       newbutton.style.height = "25vh"
       document.querySelector('#infowindow').append(newbutton)
 
-      // Adapt this to add in button selection method  
+      // Set On Click Event for Buttons 
       console.log("Adding on click event")
       document.getElementById(element.Name).addEventListener('click', () => {
         regionSelect(Name);
@@ -58,6 +64,7 @@ fetch("info.json")
       })
       })
     }
+
     // Set Intial View
       console.log("Setting Initial View")
       regionView(info);
