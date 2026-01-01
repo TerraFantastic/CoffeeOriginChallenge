@@ -16,7 +16,9 @@ fetch("info.json")
       document.querySelector('#infowindow').innerHTML = ""
       
       // Find the countries for the selected region and create buttons for them 
-      info.Name[region].Countries.forEach(element => {
+      let location = info.find(item => item.Name === region)
+      console.log("location is "location)
+      info.Regions[location].Countries.forEach(element => {
         let newbutton = document.createElement('button')
         var Name = element.Name
         newbutton.innerHTML = Name
