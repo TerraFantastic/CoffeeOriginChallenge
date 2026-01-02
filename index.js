@@ -62,7 +62,7 @@ fetch("info.json")
       })
       })
     }
-    
+
     // Set Intial View
     async function initalView() {
 
@@ -73,9 +73,13 @@ fetch("info.json")
       document.querySelector('#infowindow').append(loadingMessage)
 
       // Await Map Ready
+      console.log("Awaiting Map Load")
       await document.querySelector("arcgis-map").componentOnReady();
+      console.log("Map Loaded")
       regionView(info);
     }
+  
+    initalView();
   }
   )
 
