@@ -39,12 +39,9 @@ fetch("info.json")
     // Function for displaying all regions
     function regionView(info) {
       
-      // Check if there in anything in the infowindow, if so clear
-      if (document.querySelector('#infowindow').innerHTML != "")
-      {
-        console.log("Erasing infowindow")
-        document.querySelector('#infowindow').innerHTML = ""
-      }
+      console.log("Erasing infowindow")
+      document.querySelector('#infowindow').innerHTML = ""
+      
       
       // Creates New Button for each Region 
       info.Regions.forEach(element => {
@@ -65,10 +62,20 @@ fetch("info.json")
       })
       })
     }
-
+    
     // Set Intial View
+    async function initalView() {
+
+      // Set a loading message
       console.log("Setting Initial View")
+      let loadingMessage = document.createElement('h1')
+      loadingMessage.innerHTML = "Application Loading"
+      document.querySelector('#infowindow').append(loadingMessage)
+
+      // Await Map Ready
+      await document.querySelector("arcgis-map").componentOnReady();
       regionView(info);
+    }
   }
   )
 
