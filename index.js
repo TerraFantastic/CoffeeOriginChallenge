@@ -75,9 +75,9 @@ fetch("info.json")
       // Await Map Ready
       console.log("Awaiting Map Load")
       const viewElement = document.querySelector("arcgis-map");
-      console.log(viewElement)
-      await viewElement.viewOnReady();
-      regionView(info);
+      viewElement.addEventListener("arcgisViewReadyChange", async (event) => {
+        regionView(info);
+      })
     }
 
     initalView();
