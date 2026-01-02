@@ -74,12 +74,13 @@ fetch("info.json")
 
       // Await Map Ready
       console.log("Awaiting Map Load")
-      await document.querySelector("arcgis-map").componentOnReady();
-      console.log("Map Loaded")
+      const viewElement = document.querySelector("arcgis-map");
+      await viewElement.viewOnReady();
       regionView(info);
     }
-  
+
     initalView();
+
   }
   )
 
