@@ -5,11 +5,7 @@
 
         <!-- Load CSS Stylesheet -->
 
-        <!-- Load Javascript Control Script -->
-        <script src="index.js"></script>
-
         <!-- Load ESRI Javascript SDK Components -->
-
         <!-- Load Calcite -->
         <script type="module" src="https://js.arcgis.com/calcite-components/3.0.3/calcite.esm.js"></script>
         
@@ -18,7 +14,7 @@
         <script src="https://js.arcgis.com/4.32/" defer></script>
 
         <!-- Load map components -->
-        <script type="module" src="https://js.arcgis.com/map-components/4.32/arcgis-map-components.esm.js"></script>
+        <script type="module" src="https://js.arcgis.com/map-components/4.32/arcgis-map-components.esm.js" defer></script>
 
     </head>
     <body>
@@ -33,6 +29,10 @@
                  </arcgis-map>
         </div>
         </div>
+
+    <!-- Load Javascript Control Script -->
+        <script src="index.js" defer></script>
+
     </body>
 </html>
 
