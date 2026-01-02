@@ -68,7 +68,7 @@ fetch("info.json")
 
       // Set a loading message
       console.log("Setting Initial View")
-      let loadingMessage = document.createElement('h1')
+      let loadingMessage = document.createElement('h3')
       loadingMessage.innerHTML = "Application Loading"
       document.querySelector('#infowindow').append(loadingMessage)
 
