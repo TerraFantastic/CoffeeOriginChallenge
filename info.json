@@ -2,8 +2,8 @@
     "Regions": [
         {
             "Name": "Africa", 
-            "centre": "-2.038078, 34.699112",
-            "zoom": 3,
+            "centre": "50, 0",
+            "zoom": 4,
             "Countries": [
                 {
                     "Name": "Burundi"
@@ -33,8 +33,8 @@
         },
         {
             "Name":"Asia",
-            "centre": "31.323192, 71.988659",
-            "zoom": 2,
+            "centre": "85, 35",
+            "zoom": 3,
             "Countries": [
                 {
                     "Name": "China"
@@ -61,8 +61,8 @@
         },
         {
             "Name":"Americas",
-            "centre": "1.090325, -68.748196",
-            "zoom": 4,
+            "centre": "300, 0",
+            "zoom": 3,
             "Countries": [
                 {
                     "Name": "Bolivia"
