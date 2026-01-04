@@ -14,6 +14,20 @@ fetch("info.json")
       
       // Clear the infowindow div
       document.querySelector('#infowindow').innerHTML = ""
+
+      // Create back button first
+      let backbutton = document.createElement('button')
+      var Name = "Back"
+      newbutton.innerHTML = Name
+      newbutton.id = Name
+      newbutton.style.width = "33vw"
+      newbutton.style.height = "10vh"
+      document.querySelector('#infowindow').append(newbutton)
+
+      document.getElementById(Name).addEventListener('click', () => {
+      initialview();
+      })
+      
       
       // Find the countries for the selected region and create buttons for them 
       let location = info.Regions.find(item => item.Name === region);
