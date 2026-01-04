@@ -24,7 +24,9 @@ fetch("info.json")
       document.querySelector('#infowindow').append(backbutton)
 
       document.getElementById("Back").addEventListener('click', () => {
-      initialview();
+      document.querySelector("arcgis-map").center = "1.5972078, 31.7749655"
+      document.querySelector("arcgis-map").zoom = "2"
+      regionView(info);
       })
 
       // Find the countries for the selected region and create buttons for them 
@@ -40,7 +42,6 @@ fetch("info.json")
         document.querySelector('#infowindow').append(newbutton)
 
         // Set On Click Event for Buttons 
-
         })
       
       //Update Map Centre and Visible Layers 
