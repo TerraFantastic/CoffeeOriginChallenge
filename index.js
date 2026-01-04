@@ -17,18 +17,16 @@ fetch("info.json")
 
       // Create back button first
       let backbutton = document.createElement('button')
-      var Name = "Back"
-      newbutton.innerHTML = Name
-      newbutton.id = Name
-      newbutton.style.width = "33vw"
-      newbutton.style.height = "10vh"
-      document.querySelector('#infowindow').append(newbutton)
+      backbutton.innerHTML = "Back"
+      backbutton.id = "Back"
+      backbutton.style.width = "33vw"
+      backbutton.style.height = "10vh"
+      document.querySelector('#infowindow').append(backbutton)
 
-      document.getElementById(Name).addEventListener('click', () => {
+      document.getElementById("Back").addEventListener('click', () => {
       initialview();
       })
-      
-      
+
       // Find the countries for the selected region and create buttons for them 
       let location = info.Regions.find(item => item.Name === region);
       console.log("location is ", location)
