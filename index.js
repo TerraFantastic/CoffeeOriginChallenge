@@ -9,6 +9,24 @@ fetch("info.json")
     const info = json
     console.log("Set JSON Details")
 
+    function countrySelect(country, region) {
+
+      // Clear the infowindow div
+      document.querySelector('#infowindow').innerHTML = ""
+
+      // Create back button first
+      let backbutton = document.createElement('button')
+      backbutton.innerHTML = "Back"
+      backbutton.id = "Back"
+      backbutton.style.width = "33vw"
+      backbutton.style.height = "10vh"
+      document.querySelector('#infowindow').append(backbutton)
+
+      document.getElementById("Back").addEventListener('click', () => {
+      regionSelect(region);
+      })
+    }
+
     // Function for updating the mapview when a region is selected
     function regionSelect(region) {
       
@@ -42,7 +60,11 @@ fetch("info.json")
         document.querySelector('#infowindow').append(newbutton)
 
         // Set On Click Event for Buttons 
-        })
+        document.getElementById("Back").addEventListener('click', () => {
+        document.querySelector("arcgis-map").center = "1.5972078, 31.7749655"
+        document.querySelector("arcgis-map").zoom = "2"
+        countrySelect("Test", Name);
+        })})
       
       //Update Map Centre and Visible Layers 
       
