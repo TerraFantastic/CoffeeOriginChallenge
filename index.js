@@ -3,7 +3,7 @@ fetch("info.json")
   .then(response => response.json())
   .then(json => {
 
-    
+
     console.log("Loaded in JSON file")
     
     // Attach loaded in object to variable "info"
@@ -24,7 +24,7 @@ fetch("info.json")
       document.querySelector('#infowindow').append(backbutton)
 
       document.getElementById("Back").addEventListener('click', () => {
-      regionSelect(region);
+      regionView(region);
       })
     }
 
