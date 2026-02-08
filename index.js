@@ -38,6 +38,8 @@ fetch("info.json")
       
       // Clear the infowindow div
       document.querySelector('#infowindow').innerHTML = ""
+      console.log("Div Cleared")
+      console.log(region)
 
       // Create back button first
       let backbutton = document.createElement('button')
