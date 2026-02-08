@@ -1,4 +1,5 @@
 import "@arcgis/map-components/components/arcgis-map";
+console.log("Esri Imported")
 
 // Load in Json file 
 fetch("info.json")
