@@ -12,9 +12,13 @@ fetch("info.json")
 
     function countrySelect(country, region) {
 
+      console.log("Country Clicked")
+
       // Clear the infowindow div
       document.querySelector('#infowindow').innerHTML = ""
 
+      console.log("Div Cleared")
+      
       // Create back button first
       let backbutton = document.createElement('button')
       backbutton.innerHTML = "Back"
@@ -24,6 +28,7 @@ fetch("info.json")
       document.querySelector('#infowindow').append(backbutton)
 
       document.getElementById("Back").addEventListener('click', () => {
+        console("Back Button Clicked")
       regionSelect(region);
       })
     }
