@@ -1,6 +1,3 @@
-import "@arcgis/map-components/components/arcgis-map";
-console.log("Esri Imported")
-
 // Load in Json file 
 fetch("info.json")
   .then(response => response.json())
@@ -123,19 +120,11 @@ fetch("info.json")
         regionView(info);
       })
     }
-
-    const map = new WebMap({
-      portalItem: {
-        id: "c70b1ec991f54cc7b65399623cfa0952"
-      }
-    })
-
+    
+    const map = document.getElementsByTagName("arcgis-map")
     console.log(map.allLayers)
     initalView();
 
-  }
-  )
-
-
-
+    })
+    
 
