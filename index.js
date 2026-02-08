@@ -69,7 +69,7 @@ fetch("info.json")
 
         // Set On Click Event for Buttons 
         document.getElementById(Name).addEventListener('click', () => {
-        countrySelect("Test", Name);
+        countrySelect("Test", region);
         })})
       
       //Update Map Centre and Visible Layers 
