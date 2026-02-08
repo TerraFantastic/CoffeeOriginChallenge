@@ -1,8 +1,9 @@
+import "@arcgis/map-components/components/arcgis-map";
+
 // Load in Json file 
 fetch("info.json")
   .then(response => response.json())
   .then(json => {
-
 
     console.log("Loaded in JSON file")
     
@@ -121,11 +122,13 @@ fetch("info.json")
         regionView(info);
       })
     }
+
     const map = new WebMap({
       portalItem: {
         id: "c70b1ec991f54cc7b65399623cfa0952"
       }
     })
+
     console.log(map.allLayers)
     initalView();
 
