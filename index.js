@@ -24,7 +24,7 @@ fetch("info.json")
       document.querySelector('#infowindow').append(backbutton)
 
       document.getElementById("Back").addEventListener('click', () => {
-      regionView(region);
+      regionSelect(region);
       })
     }
 
