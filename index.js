@@ -3,6 +3,7 @@ fetch("info.json")
   .then(response => response.json())
   .then(json => {
 
+    
     console.log("Loaded in JSON file")
     
     // Attach loaded in object to variable "info"
