@@ -120,9 +120,9 @@ fetch("info.json")
         regionView(info);
       })
     }
-    
+
     const map = document.getElementsByTagName("arcgis-map")
-    console.log(map.allLayers)
+    console.log(map.layersViews)
     initalView();
 
     })
