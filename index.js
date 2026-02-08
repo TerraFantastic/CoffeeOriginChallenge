@@ -67,8 +67,6 @@ fetch("info.json")
 
         // Set On Click Event for Buttons 
         document.getElementById("Back").addEventListener('click', () => {
-        document.querySelector("arcgis-map").center = "1.5972078, 31.7749655"
-        document.querySelector("arcgis-map").zoom = "2"
         countrySelect("Test", Name);
         })})
       
