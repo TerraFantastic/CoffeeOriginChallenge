@@ -18,7 +18,7 @@ fetch("info.json")
       document.querySelector('#infowindow').innerHTML = ""
 
       console.log("Div Cleared")
-      
+
       // Create back button first
       let backbutton = document.createElement('button')
       backbutton.innerHTML = "Back"
@@ -28,7 +28,7 @@ fetch("info.json")
       document.querySelector('#infowindow').append(backbutton)
 
       document.getElementById("Back").addEventListener('click', () => {
-        console("Back Button Clicked")
+        console.log("Back Button Clicked")
       regionSelect(region);
       })
     }
