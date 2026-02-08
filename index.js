@@ -64,7 +64,7 @@ fetch("info.json")
         newbutton.style.width = "33vw"
         newbutton.style.height = "10vh"
         document.querySelector('#infowindow').append(newbutton)
-Kw
+
         // Set On Click Event for Buttons 
         document.getElementById(Name).addEventListener('click', () => {
         countrySelect("Test", Name);
