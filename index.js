@@ -30,11 +30,23 @@ fetch("info.json")
         console.log("Back Button Clicked")
       regionSelect(region);
       })
+
+      
     }
 
     // Function for updating the mapview when a region is selected
     function regionSelect(region) {
-      
+
+      //Set Location pointer to appropriate part of the JSON
+      let location = info.Regions.find(item => item.Name === region);
+      let localid = location.id
+      console.log(localid)
+      let regionlayer = document.querySelector("arcgis-map").map.layers.findLayerById(localid)
+      console.log(regionlayer.fullExtent.centre)
+      //document.querySelector("arcgis-map").center = location.centre
+      document.querySelector("arcgis-map").center = regionlayer.fullExtent.centre
+      document.querySelector("arcgis-map").zoom = location.zoom
+
       // Clear the infowindow div
       document.querySelector('#infowindow').innerHTML = ""
       console.log("Div Cleared")
@@ -55,9 +67,7 @@ fetch("info.json")
       })
 
       // Find the countries for the selected region and create buttons for them 
-      let location = info.Regions.find(item => item.Name === region);
-      console.log("location is ", location)
-      location.Countries.forEach(element => {
+        location.Countries.forEach(element => {
         let newbutton = document.createElement('button')
         var Name = element.Name
         newbutton.innerHTML = Name
@@ -73,9 +83,7 @@ fetch("info.json")
       
       //Update Map Centre and Visible Layers 
       
-      document.querySelector("arcgis-map").center = location.centre
-      document.querySelector("arcgis-map").zoom = location.zoom
-      } 
+    }
     
     // Function for displaying all regions
     function regionView(info) {
