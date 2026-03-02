@@ -41,7 +41,7 @@ fetch("info.json")
       let location = info.Regions.find(item => item.Name === region);
       let localid = location.id
       console.log(localid)
-      let regionlayer = document.querySelector("arcgis-map").map.layers.findLayerById(localid)
+      let regionlayer = document.querySelector("arcgis-map").Map.layers.findLayerById(localid)
       console.log(regionlayer.fullExtent.centre)
       //document.querySelector("arcgis-map").center = location.centre
       document.querySelector("arcgis-map").center = regionlayer.fullExtent.centre
