@@ -2,7 +2,7 @@
     "Regions": [
         {
             "Name": "Africa", 
-            "centre": "50, 0",
+            "id": "dd8a4f353b2b4beb823a1263544bc3c1",
             "zoom": 4,
             "Countries": [
                 {
@@ -33,7 +33,7 @@
         },
         {
             "Name":"Asia",
-            "centre": "85, 35",
+            "id": "1a93da28b66f4f74976640e3e3a21a40"
             "zoom": 3,
             "Countries": [
                 {
@@ -61,7 +61,7 @@
         },
         {
             "Name":"Americas",
-            "centre": "300, 0",
+            "id": "b5cefae7a3a34f84943d61ec515fbe4f",
             "zoom": 3,
             "Countries": [
                 {
@@ -119,4 +119,5 @@
         }
     ]
 }
+
 
